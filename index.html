@@ -1,708 +1,790 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ángel Llamas Ventura - Ingeniero Informático</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ángel Llamas Ventura - Ingeniero Informático</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- SEO / Social -->
+  <meta name="description" content="Ingeniero Informático especializado en arquitectura, optimización y administración de bases de datos. Portfolio profesional de Ángel Llamas Ventura." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta property="og:title" content="Ángel Llamas Ventura - Ingeniero Informático" />
+  <meta property="og:description" content="Especialista en arquitectura y desarrollo de bases de datos. Experiencia en Full-Stack y ServiceNow." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="imagenes/yo.jpg" />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Preload -->
+  <link rel="preload" as="image" href="imagenes/yo.jpg" />
+
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Ángel Llamas Ventura",
+    "jobTitle":"Ingeniero Informático",
+    "knowsAbout":["Bases de datos","Arquitectura de datos","Optimización","Desarrollo Full-Stack","ServiceNow"],
+    "email":"mailto:angel.llamas@gmail.com",
+    "address":{"@type":"PostalAddress","addressLocality":"Sant Celoni","addressCountry":"ES"},
+    "url":"/"
+  }
+  </script>
 </head>
+
 <body class="text-gray-900">
-    <!-- Premium Navigation -->
-    <nav class="fixed top-0 w-full nav-premium z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold text-white playfair">Ángel Llamas Ventura</div>
-                <div class="hidden md:flex space-x-2">
-                    <a href="#inicio" class="nav-link">Inicio</a>
-                    <a href="#sobre-mi" class="nav-link">Sobre Mí</a>
-                    <a href="#experiencia" class="nav-link">Experiencia</a>
-                    <a href="#bases-datos" class="nav-link">Bases de Datos</a>
-                    <a href="#habilidades" class="nav-link">Habilidades</a>
-                    <a href="#contacto" class="nav-link">Contacto</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+  <!-- Progreso de scroll -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <!-- Skip link -->
+  <a href="#inicio" class="skip-link">Saltar al contenido</a>
 
-    <!-- ========================= Portada (NEGRO) =========================== -->
-    <section id="inicio" class="min-h-screen flex items-center justify-center hero-dark relative overflow-hidden">
-        <div class="absolute inset-0 parallax-element" style="transform: translateZ(0);">
-            <div class="absolute top-20 left-10 w-2 h-2 bg-white/10 rounded-full animate-pulse"></div>
-            <div class="absolute top-40 right-20 w-1 h-1 bg-white/20 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
-            <div class="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-white/15 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
-            <div class="absolute top-1/3 right-1/3 w-1 h-1 bg-white/10 rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
-        </div>
+  <!-- NAV -->
+  <header class="fixed top-0 w-full nav-premium z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="#inicio" class="text-2xl font-bold text-white playfair tracking-tight focus:outline-none focus:ring-2 focus:ring-white/30 rounded-md px-1">
+          Ángel Llamas Ventura
+        </a>
 
-        <div class="max-w-7xl mx-auto px-6 py-20 relative z-10">
-            <div class="text-center">
-                <div class="mb-16 fade-in">
-                    <div class="w-56 h-56 mx-auto mb-12 accent-dark rounded-full flex items-center justify-center shadow-2xl float-elegant border-4 border-white/10 parallax-element overflow-hidden">
-                        <img src="imagenes/yo.jpg" alt="Ángel Llamas Ventura" class="w-full h-full object-cover rounded-full" />
-                    </div>
-                </div>
-                <h1 class="text-7xl md:text-8xl font-bold mb-8 text-white playfair fade-in">
-                    <span id="typing-text" class="typing-cursor">Ángel Llamas Ventura</span>
-                </h1>
-                <h2 class="text-3xl md:text-4xl text-gray-300 mb-8 font-light fade-in">Ingeniero Informático</h2>
-                <p class="text-xl text-gray-400 mb-16 max-w-4xl mx-auto leading-relaxed fade-in">
-                    Especialista en <span class="text-white font-semibold">arquitectura y desarrollo de bases de datos</span>.
-                    Graduado en Ingeniería Informática por la Universidad de Girona (UdG).
-                    Experto en diseño, optimización y administración de sistemas de datos complejos.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-8 justify-center fade-in">
-                    <button onclick="scrollToSection('contacto')" class="btn-premium">
-                        Contactar Ahora
-                    </button>
-                    <button onclick="scrollToSection('bases-datos')" class="border-2 border-white/30 text-gray-300 px-8 py-4 rounded-lg hover:border-white hover:text-white transition-all duration-500 font-semibold hover:bg-white/10">
-                        Ver Experiencia en BD
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- Menú escritorio -->
+        <nav class="hidden md:flex items-center space-x-1" aria-label="Principal">
+          <a href="#inicio"        class="nav-link" data-nav>Inicio</a>
+          <a href="#sobre-mi"      class="nav-link" data-nav>Sobre Mí</a>
+          <a href="#experiencia"   class="nav-link" data-nav>Experiencia</a>
+          <a href="#conocimientos" class="nav-link" data-nav>Conocimientos</a>
+          <a href="#habilidades"   class="nav-link" data-nav>Habilidades</a>
+          <a href="#contacto"      class="nav-link" data-nav>Contacto</a>
+        </nav>
 
-    <!-- ========================= Sobre Mi (BLANCO) =========================== -->
-    <section id="sobre-mi" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-20">
-                <h2 class="text-6xl font-bold text-gray-900 mb-8 playfair fade-in">Sobre Mí</h2>
-                <div class="w-32 h-1 bg-black mx-auto fade-in"></div>
-            </div>
-            <div class="grid md:grid-cols-2 gap-20 items-center">
-                <div class="slide-in-left">
-                    <div class="elegant-card-dark p-10 rounded-3xl">
-                        <h3 class="text-3xl font-bold mb-8 text-white playfair">Perfil Profesional</h3>
-                        <div class="space-y-6">
-                            <div class="flex items-center">
-                                <div class="w-4 h-4 bg-white rounded-full mr-6"></div>
-                                <span class="text-gray-300 text-lg">Ingeniero Informático - Universidad de Girona</span>
-                            </div>
-                            <div class="flex items-center">
-                                <div class="w-4 h-4 bg-white rounded-full mr-6"></div>
-                                <span class="text-gray-300 text-lg">Arquitecto de Bases de Datos</span>
-                            </div>
-                            <div class="flex items-center">
-                                <div class="w-4 h-4 bg-white rounded-full mr-6"></div>
-                                <span class="text-gray-300 text-lg">Especialista en Optimización de BD</span>
-                            </div>
-                            <div class="flex items-center">
-                                <div class="w-4 h-4 bg-white rounded-full mr-6"></div>
-                                <span class="text-gray-300 text-lg">Desarrollador Full-Stack</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide-in-right">
-                    <h3 class="text-4xl font-bold mb-8 text-gray-900 playfair">Excelencia en Datos</h3>
-                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                        Como ingeniero informático especializado en bases de datos, mi experiencia abarca desde el diseño conceptual
-                        hasta la implementación y optimización de sistemas de datos complejos. Mi formación en la Universidad de Girona
-                        me ha proporcionado una base sólida en ciencias de la computación y arquitectura de sistemas.
-                    </p>
-                    <p class="text-xl text-gray-600 mb-10 leading-relaxed">
-                        Mi enfoque se centra en crear arquitecturas de datos escalables, seguras y eficientes que soporten
-                        el crecimiento empresarial. Cada proyecto es una oportunidad para aplicar las mejores prácticas
-                        en modelado de datos y optimización de rendimiento.
-                    </p>
-                    <div class="grid grid-cols-2 gap-8">
-                        <div class="text-center p-8 elegant-card rounded-2xl">
-                            <div class="text-4xl font-bold text-black mb-2">15+</div>
-                            <div class="text-gray-600 text-lg">Tecnologías BD</div>
-                        </div>
-                        <div class="text-center p-8 elegant-card rounded-2xl">
-                            <div class="text-4xl font-bold text-black mb-2">100%</div>
-                            <div class="text-gray-600 text-lg">Dedicación</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- Botón móvil -->
+        <button id="btn-mobile" class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl border border-white/15 text-white/90 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-drawer">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor"><path d="M4 6h16M4 12h16M4 18h16" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
 
-<!-- ========================= Experiencia (NEGRO) =========================== -->
-<section id="experiencia" class="py-24 section-dark">
-  <div class="max-w-7xl mx-auto px-6 relative z-10">
-    <div class="text-center mb-20">
-      <h2 class="text-6xl font-bold text-white mb-8 playfair fade-in">Experiencia y Formación</h2>
-      <div class="w-32 h-1 bg-white mx-auto fade-in"></div>
+      <!-- Menú móvil -->
+      <nav id="nav-drawer" class="nav-drawer md:hidden pt-3" aria-label="Menú móvil">
+        <div class="grid gap-1">
+          <a href="#inicio"        class="nav-link block" data-nav>Inicio</a>
+          <a href="#sobre-mi"      class="nav-link block" data-nav>Sobre Mí</a>
+          <a href="#experiencia"   class="nav-link block" data-nav>Experiencia</a>
+          <a href="#conocimientos" class="nav-link block" data-nav>Conocimientos</a>
+          <a href="#habilidades"   class="nav-link block" data-nav>Habilidades</a>
+          <a href="#contacto"      class="nav-link block" data-nav>Contacto</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="inicio" class="min-h-screen flex items-center justify-center hero-dark relative overflow-hidden">
+    <div class="absolute inset-0 parallax-element" aria-hidden="true">
+      <div class="absolute top-20 left-10 w-2 h-2 bg-white/10 rounded-full animate-pulse"></div>
+      <div class="absolute top-40 right-20 w-1 h-1 bg-white/20 rounded-full animate-pulse" style="animation-delay:1s"></div>
+      <div class="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-white/15 rounded-full animate-pulse" style="animation-delay:2s"></div>
+      <div class="absolute top-1/3 right-1/3 w-1 h-1 bg-white/10 rounded-full animate-pulse" style="animation-delay:.5s"></div>
     </div>
 
-    <div class="max-w-5xl mx-auto">
-      <div class="relative">
-        <div class="absolute left-10 top-0 bottom-0 timeline-line"></div>
-
-        <!-- UdG -->
-        <div class="slide-in-left mb-16 relative">
-          <div class="flex items-center mb-6">
-            <div class="timeline-dot mr-10 relative z-10 flex items-center justify-center">
-              <img src="imagenes/universitat.jpg" alt="Ingeniería Informática" class="w-8 h-8" />
-            </div>
-            <div>
-              <div class="flex flex-wrap items-center gap-3">
-                <h3 class="text-3xl font-bold text-white playfair">Grado en Ingeniería Informática</h3>
-                <span class="text-white/40">·</span>
-                <span class="text-white/90">Universidad de Girona (UdG)</span>
-              </div>
-              <div class="mt-3 flex flex-wrap items-center gap-2">
-                <time datetime="2019-09" class="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm font-medium">
-                  Sep 2019 — Jun 2025
-                </time>
-                <span class="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm">Bases de datos</span>
-                <span class="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm">Arquitectura de sistemas</span>
-              </div>
-            </div>
-          </div>
-          <div class="ml-28">
-            <div class="elegant-card-dark p-8 rounded-2xl">
-              <p class="text-gray-300 leading-relaxed text-lg mb-4">
-                Formación sólida en ciencias de la computación con foco en <span class="text-white">diseño, gestión y optimización de bases de datos</span>, así como arquitectura de sistemas y desarrollo de software.
-              </p>
-              <div class="grid md:grid-cols-2 gap-6">
-                <ul class="list-disc list-inside text-gray-300 space-y-2">
-                  <li>Programación · Fundamentos y paradigmas de la computación</li>
-                  <li>Arquitectura de computadores · Sistemas operativos</li>
-                  <li>Estadística · Inteligencia artificial · Robótica</li>
-                  <li>Conceptos avanzados de software · Ingeniería de software</li>
-                </ul>
-                <ul class="list-disc list-inside text-gray-300 space-y-2">
-                  <li>Gestión y <span class="text-white">diseño de bases de datos</span></li>
-                  <li>Normalización, modelado conceptual/lógico/físico</li>
-                  <li>Consultas optimizadas, índices y transaccionalidad</li>
-                  <li>Buenas prácticas de seguridad y calidad de datos</li>
-                </ul>
-              </div>
-            </div>
+    <div class="max-w-7xl mx-auto px-6 py-28 relative z-10">
+      <div class="text-center">
+        <div class="mb-14 fade-in">
+          <div class="w-56 h-56 mx-auto mb-10 accent-dark rounded-full flex items-center justify-center shadow-2xl float-elegant border-4 border-white/10 parallax-element overflow-hidden">
+            <img src="imagenes/yo.jpg" width="448" height="448" fetchpriority="high" decoding="async" alt="Ángel Llamas Ventura" class="w-full h-full object-cover rounded-full" />
           </div>
         </div>
-
-        <!-- ServiceNow · Banco Sabadell -->
-        <div class="slide-in-right mb-16 relative">
-          <div class="flex items-center mb-6">
-            <div class="timeline-dot mr-10 relative z-10 flex items-center justify-center">
-              <img src="imagenes/database_arquitect.jpg" alt="ServiceNow Developer" class="w-8 h-8" />
-            </div>
-            <div>
-              <div class="flex flex-wrap items-center gap-3">
-                <h3 class="text-3xl font-bold text-white playfair">ServiceNow Developer</h3>
-                <span class="text-white/40">·</span>
-                <span class="text-white/90">TeamNow → Banco Sabadell</span>
-              </div>
-              <div class="mt-3 flex flex-wrap items-center gap-2">
-                <time datetime="2024-02" class="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm font-medium">
-                  Feb 2024 — Ene 2025
-                </time>
-                <span class="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm">JavaScript · CMDB · Integraciones</span>
-                <span class="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm">Gobierno del dato</span>
-              </div>
-            </div>
-          </div>
-          <div class="ml-28">
-            <div class="elegant-card-dark p-8 rounded-2xl">
-              <p class="text-gray-300 leading-relaxed text-lg mb-5">
-                Desarrollo en ServiceNow con <span class="text-white">JavaScript</span> (Business Rules, Script Includes, UI Actions) y
-                <span class="text-white">gestión/consultoría de base de datos</span> para la CMDB y módulos ITSM, garantizando integridad, rendimiento y seguridad de la información.
-              </p>
-              <ul class="list-disc list-inside text-gray-300 space-y-2">
-                <li><span class="text-white">Modelo de datos</span>: diseño de tablas, relaciones (jerárquicas/N:N), normalización y reglas de integridad.</li>
-                <li><span class="text-white">Calidad de datos</span>: Import/Export Sets, Transform Maps con <em>coalesce</em>, Data Policies y validaciones.</li>
-                <li><span class="text-white">Rendimiento</span>: optimización de consultas (<em>GlideRecord</em>, Database Views) e indexación selectiva.</li>
-                <li><span class="text-white">Integraciones</span>: REST/SOAP e IntegrationHub; trabajos programados para pipelines de datos.</li>
-                <li><span class="text-white">Seguridad</span>: ACLs/roles, segregación por unidades y auditoría de cambios.</li>
-              </ul>
-            </div>
-          </div>
+        <h1 class="text-7xl md:text-8xl font-bold mb-6 text-white playfair fade-in leading-[1.05]">
+          <span id="typing-text" class="typing-cursor">Ángel Llamas Ventura</span>
+        </h1>
+        <h2 class="text-3xl md:text-4xl text-gray-300 mb-6 font-light fade-in">Ingeniero Informático</h2>
+        <p class="text-xl text-gray-400 mb-14 max-w-4xl mx-auto leading-relaxed fade-in">
+          Especialista en <span class="text-white font-semibold">arquitectura y desarrollo de bases de datos</span>.
+          Graduado en Ingeniería Informática por la Universidad de Girona (UdG).
+          Experto en diseño, optimización y administración de sistemas de datos complejos.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center fade-in">
+          <button onclick="scrollToSection('contacto')" class="btn-premium">Contactar Ahora</button>
+          <button onclick="scrollToSection('conocimientos')" class="border-2 border-white/30 text-gray-300 px-8 py-4 rounded-lg hover:border-white hover:text-white transition-all duration-500 font-semibold hover:bg-white/10">Ver Conocimientos</button>
         </div>
-
-        <!-- Full-Stack · Columat -->
-        <div class="slide-in-left relative">
-          <div class="flex items-center mb-6">
-            <div class="timeline-dot mr-10 relative z-10 flex items-center justify-center">
-              <img src="imagenes/fullstack.jpg" alt="Desarrollador Full-Stack" class="w-8 h-8" />
-            </div>
-            <div>
-              <div class="flex flex-wrap items-center gap-3">
-                <h3 class="text-3xl font-bold text-white playfair">Desarrollador Full-Stack</h3>
-                <span class="text-white/40">·</span>
-                <span class="text-white/90">Columat</span>
-              </div>
-              <div class="mt-3 flex flex-wrap items-center gap-2">
-                <time datetime="2025-07" class="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm font-medium">
-                  Jul 2025 — Actualidad
-                </time>
-                <span class="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm">Express · React</span>
-                <span class="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm">Laravel · Vue.js</span>
-                <span class="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm">Kubernetes</span>
-                <span class="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm">Python · DBA</span>
-              </div>
-            </div>
-          </div>
-          <div class="ml-28">
-            <div class="elegant-card-dark p-8 rounded-2xl">
-              <p class="text-gray-300 leading-relaxed text-lg mb-5">
-                Diseño y desarrollo de aplicaciones <span class="text-white">full-stack</span>, con foco en arquitectura de datos, rendimiento y despliegues robustos.
-              </p>
-              <ul class="list-disc list-inside text-gray-300 space-y-2">
-                <li><span class="text-white">Express & React</span>: APIs REST y front-ends escalables; control de estado y patrón de repositorios.</li>
-                <li><span class="text-white">Laravel & Vue.js</span>: proyectos internos, componentes reutilizables y servicios orientados a datos.</li>
-                <li><span class="text-white">Python scripting</span>: automatización de tareas operativas y utilidades de datos.</li>
-                <li><span class="text-white">Gestión de servidores</span>: configuración, hardening básico y despliegues continuos.</li>
-                <li><span class="text-white">Kubernetes</span>: integración de infraestructura y orquestación de microservicios.</li>
-                <li><span class="text-white">Base de datos</span>: mejoras de diseño, normalización, índices y <em>query tuning</em>; administración y copias de seguridad.</li>
-                <li><span class="text-white">Microservicios</span>: integración entre servicios, contratos de APIs y observabilidad.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
+  </main>
+
+  <!-- SOBRE MÍ -->
+  <section id="sobre-mi" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-6xl font-bold text-gray-900 mb-4 playfair fade-in">Sobre Mí</h2>
+        <div class="title-chips fade-in">
+          <span class="chip-dark">Perfil</span>
+          <span class="chip-dark">Arquitectura de datos</span>
+          <span class="chip-dark">Optimización</span>
+        </div>
+        <div class="w-32 h-1 bg-black mx-auto mt-6 fade-in"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-20 items-center">
+        <div class="slide-in-left">
+          <div class="elegant-card-dark p-10 rounded-3xl">
+            <h3 class="text-3xl font-bold mb-8 text-white playfair">Perfil Profesional</h3>
+            <ul class="space-y-6">
+              <li class="flex items-center"><span class="w-4 h-4 bg-white rounded-full mr-6"></span><span class="text-gray-300 text-lg">Ingeniero Informático - Universidad de Girona</span></li>
+              <li class="flex items-center"><span class="w-4 h-4 bg-white rounded-full mr-6"></span><span class="text-gray-300 text-lg">Arquitecto de Bases de Datos</span></li>
+              <li class="flex items-center"><span class="w-4 h-4 bg-white rounded-full mr-6"></span><span class="text-gray-300 text-lg">Especialista en Optimización de BD</span></li>
+              <li class="flex items-center"><span class="w-4 h-4 bg-white rounded-full mr-6"></span><span class="text-gray-300 text-lg">Desarrollador Full-Stack</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="slide-in-right">
+          <h3 class="text-4xl font-bold mb-8 text-gray-900 playfair">Excelencia en Datos</h3>
+          <p class="text-xl text-gray-600 mb-6 leading-relaxed">
+            Como ingeniero informático especializado en bases de datos, mi experiencia abarca desde el diseño conceptual
+            hasta la implementación y optimización de sistemas de datos complejos. Mi formación en la Universidad de Girona
+            me ha proporcionado una base sólida en ciencias de la computación y arquitectura de sistemas.
+          </p>
+          <p class="text-xl text-gray-600 mb-10 leading-relaxed">
+            Mi enfoque se centra en crear arquitecturas de datos escalables, seguras y eficientes que soporten
+            el crecimiento empresarial. Cada proyecto es una oportunidad para aplicar las mejores prácticas
+            en modelado de datos y optimización de rendimiento.
+          </p>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="text-center p-8 elegant-card rounded-2xl">
+              <div class="text-4xl font-bold text-black mb-2">15+</div>
+              <div class="text-gray-600 text-lg">Tecnologías BD</div>
+            </div>
+            <div class="text-center p-8 elegant-card rounded-2xl">
+              <div class="text-4xl font-bold text-black mb-2">100%</div>
+              <div class="text-gray-600 text-lg">Dedicación</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section id="experiencia" class="py-24 section-dark">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-16">
+        <h2 class="text-6xl font-bold text-white mb-8 playfair fade-in">Experiencia y Formación</h2>
+        <div class="w-32 h-1 bg-white mx-auto fade-in"></div>
+      </div>
+
+      <div class="max-w-5xl mx-auto">
+        <div class="relative">
+          <div class="absolute left-10 top-0 bottom-0 timeline-line" aria-hidden="true"></div>
+
+          <!-- Full-Stack · Columat -->
+          <article class="slide-in-left relative">
+            <div class="flex items-center mb-6">
+              <div class="timeline-dot mr-10 relative z-10 flex items-center justify-center">
+                <img src="imagenes/fullstack.jpg" alt="Desarrollador Full-Stack" class="w-8 h-8 rounded-sm" loading="lazy" decoding="async" />
+              </div>
+              <div>
+                <div class="flex flex-wrap items-center gap-3">
+                  <h3 class="text-3xl font-bold text-white playfair">Desarrollador Full-Stack</h3>
+                  <span class="text-white/40">·</span>
+                  <span class="text-white/90">Columat</span>
+                </div>
+                <div class="mt-3 flex flex-wrap items-center gap-2">
+                  <time datetime="2025-07" class="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm font-medium">Jul 2025 — Actualidad</time>
+                  <span class="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm">Express · React</span>
+                  <span class="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm">Laravel · Vue.js</span>
+                  <span class="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm">Kubernetes</span>
+                  <span class="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm">Python · DBA</span>
+                </div>
+              </div>
+            </div>
+            <div class="ml-28">
+              <div class="elegant-card-dark p-8 rounded-2xl magnetic-card">
+                <p class="text-gray-300 leading-relaxed text-lg mb-5">
+                  Diseño y desarrollo de aplicaciones <span class="text-white">full‑stack</span>, con foco en arquitectura de datos, rendimiento y despliegues robustos.
+                </p>
+                <ul class="list-disc list-inside text-gray-300 space-y-2">
+                  <li><span class="text-white">Express & React</span>: APIs REST y front‑ends escalables; control de estado y patrón de repositorios.</li>
+                  <li><span class="text-white">Laravel & Vue.js</span>: proyectos internos, componentes reutilizables y servicios orientados a datos.</li>
+                  <li><span class="text-white">Python scripting</span>: automatización de tareas operativas y utilidades de datos.</li>
+                  <li><span class="text-white">Gestión de servidores</span>: configuración, hardening básico y despliegues continuos.</li>
+                  <li><span class="text-white">Kubernetes</span>: integración de infraestructura y orquestación de microservicios.</li>
+                  <li><span class="text-white">Base de datos</span>: mejoras de diseño, normalización, índices y <em>query tuning</em>; administración y copias de seguridad.</li>
+                  <li><span class="text-white">Microservicios</span>: integración entre servicios, contratos de APIs y observabilidad.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- ServiceNow · Banco Sabadell -->
+          <article class="slide-in-right mb-16 relative">
+            <div class="flex items-center mb-6">
+              <div class="timeline-dot mr-10 relative z-10 flex items-center justify-center">
+                <img src="imagenes/database_arquitect.jpg" alt="ServiceNow Developer" class="w-8 h-8 rounded-sm" loading="lazy" decoding="async" />
+              </div>
+              <div>
+                <div class="flex flex-wrap items-center gap-3">
+                  <h3 class="text-3xl font-bold text-white playfair">ServiceNow Developer</h3>
+                  <span class="text-white/40">·</span>
+                  <span class="text-white/90">TeamNow → Banco Sabadell</span>
+                </div>
+                <div class="mt-3 flex flex-wrap items-center gap-2">
+                  <time datetime="2024-02" class="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm font-medium">Feb 2024 — Ene 2025</time>
+                  <span class="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm">JavaScript · CMDB · Integraciones</span>
+                  <span class="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm">Gobierno del dato</span>
+                </div>
+              </div>
+            </div>
+            <div class="ml-28">
+              <div class="elegant-card-dark p-8 rounded-2xl magnetic-card">
+                <p class="text-gray-300 leading-relaxed text-lg mb-5">
+                  Desarrollo en ServiceNow con <span class="text-white">JavaScript</span> (Business Rules, Script Includes, UI Actions) y
+                  <span class="text-white">gestión/consultoría de base de datos</span> para la CMDB y módulos ITSM, garantizando integridad, rendimiento y seguridad de la información.
+                </p>
+                <ul class="list-disc list-inside text-gray-300 space-y-2">
+                  <li><span class="text-white">Modelo de datos</span>: diseño de tablas, relaciones (jerárquicas/N:N), normalización y reglas de integridad.</li>
+                  <li><span class="text-white">Calidad de datos</span>: Import/Export Sets, Transform Maps con <em>coalesce</em>, Data Policies y validaciones.</li>
+                  <li><span class="text-white">Rendimiento</span>: optimización de consultas (<em>GlideRecord</em>, Database Views) e indexación selectiva.</li>
+                  <li><span class="text-white">Integraciones</span>: REST/SOAP e IntegrationHub; trabajos programados para pipelines de datos.</li>
+                  <li><span class="text-white">Seguridad</span>: ACLs/roles, segregación por unidades y auditoría de cambios.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- UdG -->
+          <article class="slide-in-left mb-16 relative">
+            <div class="flex items-center mb-6">
+              <div class="timeline-dot mr-10 relative z-10 flex items-center justify-center">
+                <img src="imagenes/universitat.jpg" alt="Ingeniería Informática" class="w-8 h-8 rounded-sm" loading="lazy" decoding="async" />
+              </div>
+              <div>
+                <div class="flex flex-wrap items-center gap-3">
+                  <h3 class="text-3xl font-bold text-white playfair">Grado en Ingeniería Informática</h3>
+                  <span class="text-white/40">·</span>
+                  <span class="text-white/90">Universidad de Girona (UdG)</span>
+                </div>
+                <div class="mt-3 flex flex-wrap items-center gap-2">
+                  <time datetime="2019-09" class="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm font-medium">Sep 2019 — Jun 2025</time>
+                  <span class="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm">Bases de datos</span>
+                  <span class="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm">Arquitectura de sistemas</span>
+                </div>
+              </div>
+            </div>
+            <div class="ml-28">
+              <div class="elegant-card-dark p-8 rounded-2xl magnetic-card">
+                <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                  Formación sólida en ciencias de la computación con foco en <span class="text-white">diseño, gestión y optimización de bases de datos</span>, así como arquitectura de sistemas y desarrollo de software.
+                </p>
+                <div class="grid md:grid-cols-2 gap-6">
+                  <ul class="list-disc list-inside text-gray-300 space-y-2">
+                    <li>Programación · Fundamentos y paradigmas de la computación</li>
+                    <li>Arquitectura de computadores · Sistemas operativos</li>
+                    <li>Estadística · Inteligencia artificial · Robótica</li>
+                    <li>Conceptos avanzados de software · Ingeniería de software</li>
+                  </ul>
+                  <ul class="list-disc list-inside text-gray-300 space-y-2">
+                    <li>Gestión y <span class="text-white">diseño de bases de datos</span></li>
+                    <li>Normalización, modelado conceptual/lógico/físico</li>
+                    <li>Consultas optimizadas, índices y transaccionalidad</li>
+                    <li>Buenas prácticas de seguridad y calidad de datos</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- ========================= CONOCIMIENTOS (NUEVO) =========================== -->
+<section id="conocimientos" class="py-24 bg-white knowledge">
+  <div class="max-w-7xl mx-auto px-6">
+    <header class="text-center mb-14">
+      <h2 class="text-6xl font-bold text-gray-900 mb-4 playfair fade-in">Conocimientos</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto fade-in">
+        Una visión consolidada de mi <strong>stack</strong>: lenguajes, bases de datos y metodologías. Precisión técnica con diseño sobrio.
+      </p>
+      <div class="w-32 h-[2px] bg-black mx-auto mt-6 fade-in"></div>
+    </header>
+
+    <!-- Tabs -->
+    <div class="knowledge-tabs fade-in" role="tablist" aria-label="Conocimientos">
+      <button class="tab-button is-active" role="tab" aria-selected="true" aria-controls="panel-lenguajes" id="tab-lenguajes">Lenguajes</button>
+      <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-bases" id="tab-bases">Bases de datos</button>
+      <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-metodo" id="tab-metodo">Metodologías</button>
+    </div>
+
+    <!-- ========================= Lenguajes (SIN BARRAS) =========================== -->
+    <section id="panel-lenguajes" class="tab-panel is-active" role="tabpanel" aria-labelledby="tab-lenguajes">
+      <div class="k-table fade-in" data-k-table>
+        <!-- Java -->
+        <div class="k-row">
+          <div class="k-label with-icon">
+            <img src="imagenes/java.jpg" alt="" aria-hidden="true" />
+            <span>Java</span>
+          </div>
+          <div class="k-scopes">
+            <span class="scope-chip">APIs</span>
+            <span class="scope-chip">Microservicios</span>
+            <span class="scope-chip">Rendimiento</span>
+            <span class="scope-chip">Testing</span>
+          </div>
+          <div class="k-mastery">
+            <div class="pips" data-score="5" aria-label="Dominio: 5 de 5">
+              <span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
+            </div>
+            <span class="k-note">Producción · Mentoría</span>
+          </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="k-row">
+          <div class="k-label with-icon">
+            <img src="imagenes/javascript.jpg" alt="" aria-hidden="true" />
+            <span>JavaScript</span>
+          </div>
+          <div class="k-scopes">
+            <span class="scope-chip">Frontend</span>
+            <span class="scope-chip">Back‑end</span>
+            <span class="scope-chip">Integraciones</span>
+            <span class="scope-chip">Tooling</span>
+          </div>
+          <div class="k-mastery">
+            <div class="pips" data-score="5" aria-label="Dominio: 5 de 5">
+              <span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
+            </div>
+            <span class="k-note">Entornos modernos</span>
+          </div>
+        </div>
+
+        <!-- Python -->
+        <div class="k-row">
+          <div class="k-label with-icon">
+            <img src="imagenes/python.jpg" alt="" aria-hidden="true" />
+            <span>Python</span>
+          </div>
+          <div class="k-scopes">
+            <span class="scope-chip">Automatización</span>
+            <span class="scope-chip">Datos</span>
+            <span class="scope-chip">Scripting</span>
+          </div>
+          <div class="k-mastery">
+            <div class="pips" data-score="4" aria-label="Dominio: 4 de 5">
+              <span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
+            </div>
+            <span class="k-note">Utilidades & ETL</span>
+          </div>
+        </div>
+
+        <!-- C/C++ -->
+        <div class="k-row">
+          <div class="k-label with-icon">
+            <img src="imagenes/c_c++.jpg" alt="" aria-hidden="true" />
+            <span>C / C++</span>
+          </div>
+          <div class="k-scopes">
+            <span class="scope-chip">Sistemas</span>
+            <span class="scope-chip">Alto rendimiento</span>
+            <span class="scope-chip">Bajo nivel</span>
+          </div>
+          <div class="k-mastery">
+            <div class="pips" data-score="4" aria-label="Dominio: 4 de 5">
+              <span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
+            </div>
+            <span class="k-note">Optimización</span>
+          </div>
+        </div>
+
+        <!-- React -->
+        <div class="k-row">
+          <div class="k-label with-icon">
+            <img src="imagenes/react.jpg" alt="" aria-hidden="true" />
+            <span>React</span>
+          </div>
+          <div class="k-scopes">
+            <span class="scope-chip">Componentes</span>
+            <span class="scope-chip">Estado</span>
+            <span class="scope-chip">Rendimiento</span>
+          </div>
+          <div class="k-mastery">
+            <div class="pips" data-score="5" aria-label="Dominio: 5 de 5">
+              <span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
+            </div>
+            <span class="k-note">Escalabilidad UI</span>
+          </div>
+        </div>
+
+        <!-- Node.js -->
+        <div class="k-row">
+          <div class="k-label with-icon">
+            <img src="imagenes/node.jpg" alt="" aria-hidden="true" />
+            <span>Node.js</span>
+          </div>
+          <div class="k-scopes">
+            <span class="scope-chip">APIs</span>
+            <span class="scope-chip">Servicios</span>
+            <span class="scope-chip">CLI</span>
+          </div>
+          <div class="k-mastery">
+            <div class="pips" data-score="4" aria-label="Dominio: 4 de 5">
+              <span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
+            </div>
+            <span class="k-note">Entornos productivos</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="k-legend">Escala de dominio (pips): 1 básico — 3 sólido — 5 experto.</p>
+    </section>
+
+    <!-- ========================= Bases de datos (SIN BARRAS) =========================== -->
+    <section id="panel-bases" class="tab-panel" role="tabpanel" aria-labelledby="tab-bases" hidden>
+      <!-- Relacionales -->
+      <div class="k-group fade-in">
+        <h4 class="group-title">Relacionales</h4>
+        <div class="k-table" data-k-table>
+          <!-- PostgreSQL -->
+          <div class="k-row">
+            <div class="k-label with-icon">
+              <img src="imagenes/postgresql.svg" alt="" aria-hidden="true" />
+              <span>PostgreSQL</span>
+            </div>
+            <div class="k-scopes">
+              <span class="scope-chip">Extensiones</span>
+              <span class="scope-chip">Replicación</span>
+              <span class="scope-chip">Administración</span>
+            </div>
+            <div class="k-mastery">
+              <div class="pips" data-score="5" aria-label="Dominio: 5 de 5">
+                <span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
+              </div>
+              <span class="k-note">Extensiones · Réplicas</span>
+            </div>
+          </div>
+
+          <!-- MySQL -->
+          <div class="k-row">
+            <div class="k-label with-icon">
+              <img src="imagenes/mysql.svg" alt="" aria-hidden="true" />
+              <span>MySQL</span>
+            </div>
+            <div class="k-scopes">
+              <span class="scope-chip">Clustering</span>
+              <span class="scope-chip">Particionado</span>
+              <span class="scope-chip">Optimización</span>
+            </div>
+            <div class="k-mastery">
+              <div class="pips" data-score="5" aria-label="Dominio: 5 de 5">
+                <span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
+              </div>
+              <span class="k-note">Alta disponibilidad</span>
+            </div>
+          </div>
+
+          <!-- SQL Server -->
+          <div class="k-row">
+            <div class="k-label with-icon">
+              <img src="imagenes/sqlserver.jpg" alt="" aria-hidden="true" />
+              <span>SQL Server</span>
+            </div>
+            <div class="k-scopes">
+              <span class="scope-chip">Modelado</span>
+              <span class="scope-chip">Consultas</span>
+              <span class="scope-chip">Integración</span>
+            </div>
+            <div class="k-mastery">
+              <div class="pips" data-score="3" aria-label="Dominio: 3 de 5">
+                <span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
+              </div>
+              <span class="k-note">Operación sólida</span>
+            </div>
+          </div>
+
+          <!-- Oracle -->
+          <div class="k-row">
+            <div class="k-label with-icon">
+              <img src="imagenes/oracle.svg" alt="" aria-hidden="true" />
+              <span>Oracle</span>
+            </div>
+            <div class="k-scopes">
+              <span class="scope-chip">PL/SQL</span>
+              <span class="scope-chip">Alta disp.</span>
+              <span class="scope-chip">Rendimiento</span>
+            </div>
+            <div class="k-mastery">
+              <div class="pips" data-score="4" aria-label="Dominio: 4 de 5">
+                <span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
+              </div>
+              <span class="k-note">Operación avanzada</span>
+            </div>
+          </div>
+
+          <!-- MariaDB -->
+          <div class="k-row">
+            <div class="k-label with-icon">
+              <img src="imagenes/mariadb.jpg" alt="" aria-hidden="true" />
+              <span>MariaDB</span>
+            </div>
+            <div class="k-scopes">
+              <span class="scope-chip">Rendimiento</span>
+              <span class="scope-chip">Replicación</span>
+              <span class="scope-chip">Operación</span>
+            </div>
+            <div class="k-mastery">
+              <div class="pips" data-score="4" aria-label="Dominio: 4 de 5">
+                <span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
+              </div>
+              <span class="k-note">Optimización</span>
+            </div>
+          </div>
+
+          <!-- SQLite -->
+          <div class="k-row">
+            <div class="k-label with-icon">
+              <img src="imagenes/sqlite.jpg" alt="" aria-hidden="true" />
+              <span>SQLite</span>
+            </div>
+            <div class="k-scopes">
+              <span class="scope-chip">Ligereza</span>
+              <span class="scope-chip">Integración</span>
+              <span class="scope-chip">Embebido</span>
+            </div>
+            <div class="k-mastery">
+              <div class="pips" data-score="4" aria-label="Dominio: 4 de 5">
+                <span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
+              </div>
+              <span class="k-note">Integraciones limpias</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NoSQL -->
+      <div class="k-group fade-in">
+        <h4 class="group-title">NoSQL</h4>
+        <div class="k-table" data-k-table>
+          <!-- MongoDB -->
+          <div class="k-row">
+            <div class="k-label with-icon">
+              <img src="imagenes/mogodb.jpg" alt="" aria-hidden="true" />
+              <span>MongoDB</span>
+            </div>
+            <div class="k-scopes">
+              <span class="scope-chip">Agregaciones</span>
+              <span class="scope-chip">Sharding</span>
+              <span class="scope-chip">Réplicas</span>
+            </div>
+            <div class="k-mastery">
+              <div class="pips" data-score="5" aria-label="Dominio: 5 de 5">
+                <span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
+              </div>
+              <span class="k-note">Modelado documental</span>
+            </div>
+          </div>
+
+          <!-- ElasticSearch -->
+          <div class="k-row">
+            <div class="k-label with-icon">
+              <img src="imagenes/elasticsearch.jpg" alt="" aria-hidden="true" />
+              <span>ElasticSearch</span>
+            </div>
+            <div class="k-scopes">
+              <span class="scope-chip">Búsqueda</span>
+              <span class="scope-chip">Análisis</span>
+              <span class="scope-chip">Indexación</span>
+            </div>
+            <div class="k-mastery">
+              <div class="pips" data-score="4" aria-label="Dominio: 4 de 5">
+                <span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
+              </div>
+              <span class="k-note">Observabilidad</span>
+            </div>
+          </div>
+
+          <!-- Redis -->
+          <div class="k-row">
+            <div class="k-label with-icon">
+              <img src="imagenes/redis.jpg" alt="" aria-hidden="true" />
+              <span>Redis</span>
+            </div>
+            <div class="k-scopes">
+              <span class="scope-chip">Cache</span>
+              <span class="scope-chip">Pub/Sub</span>
+              <span class="scope-chip">Estructuras</span>
+            </div>
+            <div class="k-mastery">
+              <div class="pips" data-score="4" aria-label="Dominio: 4 de 5">
+                <span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
+              </div>
+              <span class="k-note">Baja latencia</span>
+            </div>
+          </div>
+
+          <!-- Firebase -->
+          <div class="k-row">
+            <div class="k-label with-icon">
+              <img src="imagenes/firebase.jpg" alt="" aria-hidden="true" />
+              <span>Firebase</span>
+            </div>
+            <div class="k-scopes">
+              <span class="scope-chip">Distribuida</span>
+              <span class="scope-chip">Realtime</span>
+              <span class="scope-chip">Alta disp.</span>
+            </div>
+            <div class="k-mastery">
+              <div class="pips" data-score="4" aria-label="Dominio: 4 de 5">
+                <span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
+              </div>
+              <span class="k-note">Arquitecturas ligeras</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="k-legend">Escala de dominio (pips): 1 básico — 3 sólido — 5 experto.</p>
+    </section>
+
+    <!-- ========================= Metodologías (sin cambios visuales) =========================== -->
+    <section id="panel-metodo" class="tab-panel" role="tabpanel" aria-labelledby="tab-metodo" hidden>
+      <div class="methods-grid">
+        <div class="method-block"><h5>Normalización Avanzada</h5><p>Aplicación de formas normales hasta <strong>BCNF</strong> y <strong>4NF</strong> para eliminar redundancia y anomalías.</p></div>
+        <div class="method-block"><h5>Diseño Dimensional</h5><p>Data Warehouses con esquemas <strong>estrella</strong> y <strong>copo de nieve</strong> para analítica escalable.</p></div>
+        <div class="method-block"><h5>ACID Compliance</h5><p>Aseguro <strong>atomicidad</strong>, <strong>consistencia</strong>, <strong>aislamiento</strong> y <strong>durabilidad</strong> en transacciones.</p></div>
+        <div class="method-block"><h5>Backup & Recovery</h5><p>Estrategias completas, incrementales y <strong>Point‑in‑Time</strong> con pruebas de restauración.</p></div>
+        <div class="method-block"><h5>Replicación</h5><p>Topologías maestro‑réplica y multi‑maestro; <strong>alta disponibilidad</strong> y lectura escalada.</p></div>
+        <div class="method-block"><h5>Particionamiento</h5><p>Estrategias <strong>horizontal</strong> y <strong>vertical</strong> con políticas de retención y mantenimiento.</p></div>
+      </div>
+    </section>
   </div>
 </section>
 
+  <!-- HABILIDADES (solo herramientas) -->
+  <section id="habilidades" class="py-24 section-dark">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-6xl font-bold text-white mb-8 playfair fade-in">Herramientas y Tecnologías</h2>
+        <div class="w-32 h-1 bg-white mx-auto fade-in"></div>
+      </div>
 
-    <!-- ========================= Bases de Datos (BLANCO) =========================== -->
-    <section id="bases-datos" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-20">
-                <h2 class="text-6xl font-bold text-gray-900 mb-8 playfair fade-in">Experiencia en Bases de Datos</h2>
-                <div class="w-32 h-1 bg-black mx-auto mb-8 fade-in"></div>
-                <p class="text-xl text-gray-600 max-w-4xl mx-auto fade-in">
-                    Especialización completa en el ciclo de vida de bases de datos, desde el diseño conceptual hasta la administración avanzada
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+        <div class="elegant-card-dark p-8 rounded-2xl text-center fade-in magnetic-card"><img src="imagenes/docker.jpg"     alt="Docker"     class="w-12 h-12 mx-auto mb-4 rounded-sm" loading="lazy" decoding="async" /><h5 class="font-semibold text-white text-lg">Docker</h5></div>
+        <div class="elegant-card-dark p-8 rounded-2xl text-center fade-in magnetic-card"><img src="imagenes/kubernetes.jpg" alt="Kubernetes" class="w-12 h-12 mx-auto mb-4 rounded-sm" loading="lazy" decoding="async" /><h5 class="font-semibold text-white text-lg">Kubernetes</h5></div>
+        <div class="elegant-card-dark p-8 rounded-2xl text-center fade-in magnetic-card"><img src="imagenes/git.jpg"        alt="Git"        class="w-12 h-12 mx-auto mb-4 rounded-sm" loading="lazy" decoding="async" /><h5 class="font-semibold text-white text-lg">Git</h5></div>
+        <div class="elegant-card-dark p-8 rounded-2xl text-center fade-in magnetic-card"><img src="imagenes/tailwind.png"   alt="Tailwind"   class="w-12 h-12 mx-auto mb-4 rounded-sm" loading="lazy" decoding="async" /><h5 class="font-semibold text-white text-lg">Tailwind</h5></div>
+        <div class="elegant-card-dark p-8 rounded-2xl text-center fade-in magnetic-card"><img src="imagenes/express.png"    alt="Express"    class="w-12 h-12 mx-auto mb-4 rounded-sm" loading="lazy" decoding="async" /><h5 class="font-semibold text-white text-lg">Express</h5></div>
+        <div class="elegant-card-dark p-8 rounded-2xl text-center fade-in magnetic-card"><img src="imagenes/grafana.png"    alt="Grafana"    class="w-12 h-12 mx-auto mb-4 rounded-sm" loading="lazy" decoding="async" /><h5 class="font-semibold text-white text-lg">Grafana</h5></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-6xl font-bold text-gray-900 mb-8 playfair fade-in">Contacto Profesional</h2>
+        <div class="w-32 h-1 bg-black mx-auto mb-8 fade-in"></div>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in">
+          ¿Necesitas un experto en bases de datos para tu proyecto? Hablemos sobre cómo puedo aportar valor a tu equipo.
+        </p>
+        <div class="mt-8 fade-in">
+          <a id="btn-cv" href="./assets/CV_Angel_Llamas_Ventura.pdf" download="CV_Angel_Llamas_Ventura.pdf" class="btn-premium inline-flex items-center gap-2" aria-label="Descargar CV de Ángel Llamas Ventura" title="Descargar CV">
+            Descargar CV
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 3v12m0 0l-4-4m4 4l4-4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5 21h14" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-20 items-start">
+        <div class="slide-in-left">
+          <h3 class="text-4xl font-bold mb-12 text-gray-900 playfair">Información de Contacto</h3>
+          <div class="space-y-8">
+            <div class="flex items-center elegant-card-dark p-8 rounded-2xl magnetic-card">
+              <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mr-6"><img src="imagenes/email.jpg" alt="Email" class="w-8 h-8" loading="lazy" decoding="async" /></div>
+              <div><p class="text-gray-400">Email</p><p class="text-2xl font-semibold text-white select-all">angel.llamas@gmail.com</p></div>
+            </div>
+            <div class="flex items-center elegant-card-dark p-8 rounded-2xl magnetic-card">
+              <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mr-6"><img src="imagenes/telefono.jpg" alt="Teléfono" class="w-8 h-8" loading="lazy" decoding="async" /></div>
+              <div><p class="text-gray-400">Teléfono</p><p class="text-2xl font-semibold text-white select-all">+34 671 26 01 25</p></div>
+            </div>
+            <div class="flex items-center elegant-card-dark p-8 rounded-2xl magnetic-card">
+              <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mr-6"><img src="imagenes/ubicacion.jpg" alt="Ubicación" class="w-8 h-8" loading="lazy" decoding="async" /></div>
+              <div><p class="text-gray-400">Ubicación</p><p class="text-2xl font-semibold text-white">Sant Celoni, España</p></div>
+            </div>
+            <div class="flex items-center elegant-card-dark p-8 rounded-2xl magnetic-card">
+              <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mr-6"><img src="imagenes/linkedin.jpg" alt="LinkedIn" class="w-8 h-8" loading="lazy" decoding="async" /></div>
+              <div>
+                <p class="text-gray-400">LinkedIn</p>
+                <p class="text-2xl font-semibold text-white truncate">
+                  <a href="https://www.linkedin.com/in/%C3%A1ngel-llamas-ventura-924251280/" target="_blank" rel="noopener" class="underline decoration-white/30 hover:decoration-white focus:outline-none focus:ring-2 focus:ring-black/10 rounded">linkedin.com/in/ángel-llamas-ventura-924251280</a>
                 </p>
+              </div>
             </div>
-
-            <!-- Competencias -->
-            <div class="mb-20">
-                <h3 class="text-4xl font-bold text-center mb-16 text-gray-900 playfair fade-in">Competencias Principales</h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-                    <div class="elegant-card-dark p-10 rounded-3xl text-center stagger-animation magnetic-card">
-                        <div class="db-icon mx-auto">
-                            <img src="imagenes/arquitectura.png" alt="Arquitectura de BD" class="w-12 h-12 mx-auto" />
-                        </div>
-                        <h4 class="text-2xl font-bold mb-6 text-white">Arquitectura de BD</h4>
-                        <p class="text-gray-300 leading-relaxed">Diseño de arquitecturas escalables y distribuidas para sistemas empresariales</p>
-                    </div>
-                    <div class="elegant-card-dark p-10 rounded-3xl text-center stagger-animation magnetic-card">
-                        <div class="db-icon mx-auto">
-                            <img src="imagenes/modelado.png" alt="Modelado de Datos" class="w-12 h-12 mx-auto" />
-                        </div>
-                        <h4 class="text-2xl font-bold mb-6 text-white">Modelado de Datos</h4>
-                        <p class="text-gray-300 leading-relaxed">Creación de modelos conceptuales, lógicos y físicos optimizados</p>
-                    </div>
-                    <div class="elegant-card-dark p-10 rounded-3xl text-center stagger-animation magnetic-card">
-                        <div class="db-icon mx-auto">
-                            <img src="imagenes/optimizacion.png" alt="Optimización" class="w-12 h-12 mx-auto" />
-                        </div>
-                        <h4 class="text-2xl font-bold mb-6 text-white">Optimización</h4>
-                        <p class="text-gray-300 leading-relaxed">Tuning de consultas, índices y mejora del rendimiento general</p>
-                    </div>
-                    <div class="elegant-card-dark p-10 rounded-3xl text-center stagger-animation magnetic-card">
-                        <div class="db-icon mx-auto">
-                            <img src="imagenes/seguridad.png" alt="Seguridad" class="w-12 h-12 mx-auto" />
-                        </div>
-                        <h4 class="text-2xl font-bold mb-6 text-white">Seguridad</h4>
-                        <p class="text-gray-300 leading-relaxed">Implementación de políticas de seguridad y control de acceso</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Relacionales -->
-            <div class="mb-20">
-                <h3 class="text-4xl font-bold text-center mb-16 text-gray-900 playfair fade-in">Bases de Datos Relacionales</h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <!-- (tarjetas oscuras mantienen su estilo) -->
-                    <div class="elegant-card-dark p-10 rounded-3xl stagger-animation magnetic-card">
-                        <div class="flex items-center mb-6">
-                            <img src="imagenes/postgresql.svg" alt="PostgreSQL" class="w-12 h-12 mr-6 object-contain" loading="lazy" />
-                            <h4 class="text-2xl font-bold text-white">PostgreSQL</h4>
-                        </div>
-                        <div class="skill-bar-container-dark mb-3">
-                            <div class="skill-bar skill-bar-light" data-width="95%"></div>
-                        </div>
-                        <p class="text-gray-300 mt-3">Administración avanzada, extensiones, replicación</p>
-                    </div>
-
-                    <div class="elegant-card-dark p-10 rounded-3xl stagger-animation magnetic-card">
-                        <div class="flex items-center mb-6">
-                            <img src="imagenes/mysql.svg" alt="MySQL" class="w-12 h-12 mr-6" />
-                            <h4 class="text-2xl font-bold text-white">MySQL</h4>
-                        </div>
-                        <div class="skill-bar-container-dark mb-3">
-                            <div class="skill-bar skill-bar-light" data-width="90%"></div>
-                        </div>
-                        <p class="text-gray-300 mt-3">Clustering, particionamiento, optimización</p>
-                    </div>
-
-                    <div class="elegant-card-dark p-10 rounded-3xl stagger-animation magnetic-card">
-                        <div class="flex items-center mb-6">
-                            <img src="imagenes/sqlserver.jpg" alt="SQL Server" class="w-12 h-12 mr-6" />
-                            <h4 class="text-2xl font-bold text-white">SQL Server</h4>
-                        </div>
-                        <div class="skill-bar-container-dark mb-3">
-                            <div class="skill-bar skill-bar-light" data-width="78%"></div>
-                        </div>
-                        <p class="text-gray-300 mt-3">Grafos, Cypher, relaciones complejas</p>
-                    </div>
-
-                    <div class="elegant-card-dark p-10 rounded-3xl stagger-animation magnetic-card">
-                        <div class="flex items-center mb-6">
-                            <img src="imagenes/oracle.svg" alt="Oracle" class="w-12 h-12 mr-6" />
-                            <h4 class="text-2xl font-bold text-white">Oracle</h4>
-                        </div>
-                        <div class="skill-bar-container-dark mb-3">
-                            <div class="skill-bar skill-bar-light" data-width="80%"></div>
-                        </div>
-                        <p class="text-gray-300 mt-3">PL/SQL, RAC, Data Guard</p>
-                    </div>
-
-                    <div class="elegant-card-dark p-10 rounded-3xl stagger-animation magnetic-card">
-                        <div class="flex items-center mb-6">
-                            <img src="imagenes/mariadb.jpg" alt="MariaDB" class="w-12 h-12 mr-6" />
-                            <h4 class="text-2xl font-bold text-white">MariaDB</h4>
-                        </div>
-                        <div class="skill-bar-container-dark mb-3">
-                            <div class="skill-bar skill-bar-light" data-width="82%"></div>
-                        </div>
-                        <p class="text-gray-300 mt-3">T-SQL, SSIS, Always On</p>
-                    </div>
-
-                    <div class="elegant-card-dark p-10 rounded-3xl stagger-animation magnetic-card">
-                        <div class="flex items-center mb-6">
-                            <img src="imagenes/sqlite.jpg" alt="SQLite" class="w-12 h-12 mr-6" />
-                            <h4 class="text-2xl font-bold text-white">SQLite</h4>
-                        </div>
-                        <div class="skill-bar-container-dark mb-3">
-                            <div class="skill-bar skill-bar-light" data-width="86%"></div>
-                        </div>
-                        <p class="text-gray-300 mt-3">Búsqueda, análisis, indexación</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- NoSQL -->
-            <div class="mb-20">
-                <h3 class="text-4xl font-bold text-center mb-16 text-gray-900 playfair fade-in">Bases de Datos NoSQL</h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-                    <div class="elegant-card-dark p-10 rounded-3xl fade-in">
-                        <div class="flex items-center mb-6">
-                            <img src="imagenes/mogodb.jpg" alt="MongoDB" class="w-12 h-12 mr-6" />
-                            <h4 class="text-2xl font-bold text-white">MongoDB</h4>
-                        </div>
-                        <div class="skill-bar-container-dark mb-3">
-                            <div class="skill-bar skill-bar-light" data-width="90%"></div>
-                        </div>
-                        <p class="text-gray-300 mt-3">Agregaciones, sharding, réplicas</p>
-                    </div>
-
-                    <div class="elegant-card-dark p-10 rounded-3xl fade-in">
-                        <div class="flex items-center mb-6">
-                            <img src="imagenes/elasticsearch.jpg" alt="ElasticSearch" class="w-12 h-12 mr-6" />
-                            <h4 class="text-2xl font-bold text-white">ElasticSearch</h4>
-                        </div>
-                        <div class="skill-bar-container-dark mb-3">
-                            <div class="skill-bar skill-bar-light" data-width="86%"></div>
-                        </div>
-                        <p class="text-gray-300 mt-3">Búsqueda, análisis, indexación</p>
-                    </div>
-
-                    <div class="elegant-card-dark p-10 rounded-3xl fade-in">
-                        <div class="flex items-center mb-6">
-                            <img src="imagenes/redis.jpg" alt="Redis" class="w-12 h-12 mr-6" />
-                            <h4 class="text-2xl font-bold text-white">Redis</h4>
-                        </div>
-                        <div class="skill-bar-container-dark mb-3">
-                            <div class="skill-bar skill-bar-light" data-width="88%"></div>
-                        </div>
-                        <p class="text-gray-300 mt-3">Cache, pub/sub, estructuras</p>
-                    </div>
-
-                    <div class="elegant-card-dark p-10 rounded-3xl fade-in">
-                        <div class="flex items-center mb-6">
-                            <img src="imagenes/firebase.jpg" alt="Firebase" class="w-12 h-12 mr-6" />
-                            <h4 class="text-2xl font-bold text-white">Firebase</h4>
-                        </div>
-                        <div class="skill-bar-container-dark mb-3">
-                            <div class="skill-bar skill-bar-light" data-width="82%"></div>
-                        </div>
-                        <p class="text-gray-300 mt-3">Distribuida, alta disponibilidad</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Info adicional (sigue siendo una card oscura sobre fondo blanco) -->
-            <div class="elegant-card-dark p-16 rounded-3xl shadow-2xl relative fade-in">
-                <div class="relative z-10">
-                    <div class="text-center mb-16">
-                        <h3 class="text-5xl font-bold mb-8 playfair text-white">Metodologías y Mejores Prácticas</h3>
-                        <p class="text-xl text-gray-300">Aplicación de estándares industriales y metodologías probadas</p>
-                    </div>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                        <div class="bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
-                            <h4 class="text-2xl font-bold mb-4 text-white">Normalización Avanzada</h4>
-                            <p class="text-gray-300 leading-relaxed">Aplicación de formas normales hasta BCNF y 4NF para eliminar redundancias</p>
-                        </div>
-                        <div class="bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
-                            <h4 class="text-2xl font-bold mb-4 text-white">Diseño Dimensional</h4>
-                            <p class="text-gray-300 leading-relaxed">Creación de data warehouses con esquemas estrella y copo de nieve</p>
-                        </div>
-                        <div class="bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
-                            <h4 class="text-2xl font-bold mb-4 text-white">ACID Compliance</h4>
-                            <p class="text-gray-300 leading-relaxed">Garantía de atomicidad, consistencia, aislamiento y durabilidad</p>
-                        </div>
-                        <div class="bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
-                            <h4 class="text-2xl font-bold mb-4 text-white">Backup & Recovery</h4>
-                            <p class="text-gray-300 leading-relaxed">Estrategias de respaldo completas, incrementales y point-in-time</p>
-                        </div>
-                        <div class="bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
-                            <h4 class="text-2xl font-bold mb-4 text-white">Replicación</h4>
-                            <p class="text-gray-300 leading-relaxed">Configuración de réplicas maestro-esclavo y multi-maestro</p>
-                        </div>
-                        <div class="bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
-                            <h4 class="text-2xl font-bold mb-4 text-white">Particionamiento</h4>
-                            <p class="text-gray-300 leading-relaxed">Estrategias de particionamiento horizontal y vertical para escalabilidad</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- ========================= Habilidades (NEGRO) =========================== -->
-    <section id="habilidades" class="py-24 section-dark">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-20">
-                <h2 class="text-6xl font-bold text-white mb-8 playfair fade-in">Habilidades Técnicas</h2>
-                <div class="w-32 h-1 bg-white mx-auto fade-in"></div>
+        <div class="slide-in-right">
+          <div class="elegant-card p-10 rounded-3xl border-2 border-black/10">
+            <h3 class="text-3xl font-bold mb-8 text-gray-900 playfair">Envíame un Mensaje</h3>
+            <form class="space-y-8" onsubmit="event.preventDefault(); showContactDemo();">
+              <div><label class="block text-lg font-medium mb-3 text-gray-700">Nombre Completo</label><input type="text" class="w-full form-input" placeholder="Tu nombre" /></div>
+              <div><label class="block text-lg font-medium mb-3 text-gray-700">Email Corporativo</label><input type="email" class="w-full form-input" placeholder="tu@empresa.com" /></div>
+              <div><label class="block text-lg font-medium mb-3 text-gray-700">Empresa</label><input type="text" class="w-full form-input" placeholder="Nombre de tu empresa" /></div>
+              <div><label class="block text-lg font-medium mb-3 text-gray-700">Mensaje</label><textarea rows="5" class="w-full form-input resize-none" placeholder="Cuéntame sobre tu proyecto de bases de datos..."></textarea></div>
+              <button type="submit" class="w-full btn-premium">Enviar Mensaje</button>
+            </form>
+            <div id="demo-message" class="hidden mt-6 p-6 bg-green-50 border-2 border-green-200 rounded-xl">
+              <p class="text-green-700 text-lg">✅ Demo: Mensaje enviado correctamente. En un entorno real, esto se conectaría a un servicio de email.</p>
             </div>
-
-            <!-- Lenguajes -->
-            <div class="mb-20">
-                <h3 class="text-4xl font-bold text-center mb-16 text-white playfair fade-in">Lenguajes de Programación</h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <div class="elegant-card-dark p-10 rounded-3xl fade-in">
-                        <div class="flex items-center mb-6">
-                            <img src="imagenes/java.jpg" alt="Java" class="w-12 h-12 mr-6" />
-                            <h4 class="text-2xl font-bold text-white">Java</h4>
-                        </div>
-                        <div class="skill-bar-container-dark mb-3">
-                            <div class="skill-bar skill-bar-light" data-width="95%"></div>
-                        </div>
-                    </div>
-
-                    <div class="elegant-card-dark p-10 rounded-3xl fade-in">
-                        <div class="flex items-center mb-6">
-                            <img src="imagenes/javascript.jpg" alt="JavaScript" class="w-12 h-12 mr-6" />
-                            <h4 class="text-2xl font-bold text-white">JavaScript</h4>
-                        </div>
-                        <div class="skill-bar-container-dark mb-3">
-                            <div class="skill-bar skill-bar-light" data-width="92%"></div>
-                        </div>
-                    </div>
-
-                    <div class="elegant-card-dark p-10 rounded-3xl fade-in">
-                        <div class="flex items-center mb-6">
-                            <img src="imagenes/python.jpg" alt="Python" class="w-12 h-12 mr-6" />
-                            <h4 class="text-2xl font-bold text-white">Python</h4>
-                        </div>
-                        <div class="skill-bar-container-dark mb-3">
-                            <div class="skill-bar skill-bar-light" data-width="88%"></div>
-                        </div>
-                    </div>
-
-                    <div class="elegant-card-dark p-10 rounded-3xl fade-in">
-                        <div class="flex items-center mb-6">
-                            <img src="imagenes/c_c++.jpg" alt="C/C++" class="w-12 h-12 mr-6" />
-                            <h4 class="text-2xl font-bold text-white">C/C++</h4>
-                        </div>
-                        <div class="skill-bar-container-dark mb-3">
-                            <div class="skill-bar skill-bar-light" data-width="85%"></div>
-                        </div>
-                    </div>
-
-                    <div class="elegant-card-dark p-10 rounded-3xl fade-in">
-                        <div class="flex items-center mb-6">
-                            <img src="imagenes/react.jpg" alt="React" class="w-12 h-12 mr-6" />
-                            <h4 class="text-2xl font-bold text-white">React</h4>
-                        </div>
-                        <div class="skill-bar-container-dark mb-3">
-                            <div class="skill-bar skill-bar-light" data-width="90%"></div>
-                        </div>
-                    </div>
-
-                    <div class="elegant-card-dark p-10 rounded-3xl fade-in">
-                        <div class="flex items-center mb-6">
-                            <img src="imagenes/node.jpg" alt="Node.js" class="w-12 h-12 mr-6" />
-                            <h4 class="text-2xl font-bold text-white">Node.js</h4>
-                        </div>
-                        <div class="skill-bar-container-dark mb-3">
-                            <div class="skill-bar skill-bar-light" data-width="87%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Herramientas -->
-            <div>
-                <h3 class="text-4xl font-bold text-center mb-16 text-white playfair fade-in">Herramientas y Tecnologías</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-                    <div class="elegant-card-dark p-8 rounded-2xl text-center fade-in">
-                        <img src="imagenes/docker.jpg" alt="Docker" class="w-12 h-12 mx-auto mb-4" />
-                        <h5 class="font-semibold text-white text-lg">Docker</h5>
-                    </div>
-                    <div class="elegant-card-dark p-8 rounded-2xl text-center fade-in">
-                        <img src="imagenes/kubernetes.jpg" alt="Kubernetes" class="w-12 h-12 mx-auto mb-4" />
-                        <h5 class="font-semibold text-white text-lg">Kubernetes</h5>
-                    </div>
-                    <div class="elegant-card-dark p-8 rounded-2xl text-center fade-in">
-                        <img src="imagenes/git.jpg" alt="Git" class="w-12 h-12 mx-auto mb-4" />
-                        <h5 class="font-semibold text-white text-lg">Git</h5>
-                    </div>
-                    <div class="elegant-card-dark p-8 rounded-2xl text-center fade-in">
-                        <img src="imagenes/tailwind.png" alt="Tailwind" class="w-12 h-12 mx-auto mb-4" />
-                        <h5 class="font-semibold text-white text-lg">Tailwind</h5>
-                    </div>
-                    <div class="elegant-card-dark p-8 rounded-2xl text-center fade-in">
-                        <img src="imagenes/express.png" alt="Express" class="w-12 h-12 mx-auto mb-4" />
-                        <h5 class="font-semibold text-white text-lg">Express</h5>
-                    </div>
-                    <div class="elegant-card-dark p-8 rounded-2xl text-center fade-in">
-                        <img src="imagenes/grafana.png" alt="Grafana" class="w-12 h-12 mx-auto mb-4" />
-                        <h5 class="font-semibold text-white text-lg">Grafana</h5>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- ========================= Contacto (BLANCO) =========================== -->
-    <section id="contacto" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-20">
-                <h2 class="text-6xl font-bold text-gray-900 mb-8 playfair fade-in">Contacto Profesional</h2>
-                <div class="w-32 h-1 bg-black mx-auto mb-8 fade-in"></div>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in">
-                    ¿Necesitas un experto en bases de datos para tu proyecto? Hablemos sobre cómo puedo aportar valor a tu equipo.
-                </p>
+    </div>
+  </section>
 
-                <!-- CTA Descargar CV -->
-                <div class="mt-8 fade-in">
-                    <a
-                      id="btn-cv"
-                      href="./assets/CV_Angel_Llamas_Ventura.pdf"
-                      download="CV_Angel_Llamas_Ventura.pdf"
-                      class="btn-premium inline-flex items-center gap-2"
-                      aria-label="Descargar CV de Ángel Llamas Ventura">
-                      Descargar CV
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                          <path d="M12 3v12m0 0l-4-4m4 4l4-4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M5 21h14" stroke-width="1.8" stroke-linecap="round"/>
-                      </svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-20 items-start">
-                <div class="slide-in-left">
-                    <h3 class="text-4xl font-bold mb-12 text-gray-900 playfair">Información de Contacto</h3>
-                    <div class="space-y-8">
-                        <div class="flex items-center elegant-card-dark p-8 rounded-2xl">
-                            <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mr-6">
-                                <img src="imagenes/email.jpg" alt="Email" class="w-8 h-8" />
-                            </div>
-                            <div>
-                                <p class="text-gray-400">Email</p>
-                                <p class="text-2xl font-semibold text-white">angel.llamas@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center elegant-card-dark p-8 rounded-2xl">
-                            <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mr-6">
-                                <img src="imagenes/telefono.jpg" alt="Teléfono" class="w-8 h-8" />
-                            </div>
-                            <div>
-                                <p class="text-gray-400">Teléfono</p>
-                                <p class="text-2xl font-semibold text-white">+34 671 26 01 25</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center elegant-card-dark p-8 rounded-2xl">
-                            <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mr-6">
-                                <img src="imagenes/ubicacion.jpg" alt="Ubicación" class="w-8 h-8" />
-                            </div>
-                            <div>
-                                <p class="text-gray-400">Ubicación</p>
-                                <p class="text-2xl font-semibold text-white">Sant Celoni, España</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center elegant-card-dark p-8 rounded-2xl">
-                            <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mr-6">
-                                <img src="imagenes/linkedin.jpg" alt="LinkedIn" class="w-8 h-8" />
-                            </div>
-                            <div>
-                                <p class="text-gray-400">LinkedIn</p>
-                                <p class="text-2xl font-semibold text-white">https://www.linkedin.com/in/%C3%A1ngel-llamas-ventura-924251280/</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="slide-in-right">
-                    <div class="elegant-card p-10 rounded-3xl border-2 border-black/10">
-                        <h3 class="text-3xl font-bold mb-8 text-gray-900 playfair">Envíame un Mensaje</h3>
-                        <form class="space-y-8">
-                            <div>
-                                <label class="block text-lg font-medium mb-3 text-gray-700">Nombre Completo</label>
-                                <input type="text" class="w-full form-input" placeholder="Tu nombre" />
-                            </div>
-                            <div>
-                                <label class="block text-lg font-medium mb-3 text-gray-700">Email Corporativo</label>
-                                <input type="email" class="w-full form-input" placeholder="tu@empresa.com" />
-                            </div>
-                            <div>
-                                <label class="block text-lg font-medium mb-3 text-gray-700">Empresa</label>
-                                <input type="text" class="w-full form-input" placeholder="Nombre de tu empresa" />
-                            </div>
-                            <div>
-                                <label class="block text-lg font-medium mb-3 text-gray-700">Mensaje</label>
-                                <textarea rows="5" class="w-full form-input resize-none" placeholder="Cuéntame sobre tu proyecto de bases de datos..."></textarea>
-                            </div>
-                            <button type="button" onclick="showContactDemo()" class="w-full btn-premium">
-                                Enviar Mensaje
-                            </button>
-                        </form>
-                        <div id="demo-message" class="hidden mt-6 p-6 bg-green-50 border-2 border-green-200 rounded-xl">
-                            <p class="text-green-700 text-lg">✅ Demo: Mensaje enviado correctamente. En un entorno real, esto se conectaría a un servicio de email.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- FOOTER -->
+  <footer class="footer-dark text-white py-16 relative">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="text-center">
+        <div class="text-4xl font-bold mb-6 playfair">Ángel Llamas Ventura</div>
+        <p class="text-gray-400 mb-10 text-xl">Ingeniero Informático | Especialista en Bases de Datos</p>
+        <div class="flex justify-center space-x-8 mb-12">
+          <a href="https://www.linkedin.com/in/%C3%A1ngel-llamas-ventura-924251280/" target="_blank" rel="noopener" class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center hover:bg-white/20 transition-all duration-500 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/30">
+            <img src="imagenes/linkedin.jpg" alt="LinkedIn" class="w-8 h-8" loading="lazy" decoding="async" />
+          </a>
+          <a href="mailto:angel.llamas@gmail.com" class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center hover:bg-white/20 transition-all duration-500 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/30">
+            <img src="imagenes/email.jpg" alt="Email" class="w-8 h-8" loading="lazy" decoding="async" />
+          </a>
+          <a href="#" class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center hover:bg-white/20 transition-all duration-500 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/30">
+            <img src="imagenes/git.jpg" alt="GitHub" class="w-8 h-8" loading="lazy" decoding="async" />
+          </a>
         </div>
-    </section>
-
-    <!-- Footer (NEGRO) -->
-    <footer class="footer-dark text-white py-16 relative">
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="text-center">
-                <div class="text-4xl font-bold mb-6 playfair">Ángel Llamas Ventura</div>
-                <p class="text-gray-400 mb-10 text-xl">Ingeniero Informático | Especialista en Bases de Datos</p>
-                <div class="flex justify-center space-x-8 mb-12">
-                    <a href="#" class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center hover:bg-white/20 transition-all duration-500 hover:scale-110">
-                        <img src="imagenes/linkedin.jpg" alt="LinkedIn" class="w-8 h-8" />
-                    </a>
-                    <a href="#" class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center hover:bg-white/20 transition-all duration-500 hover:scale-110">
-                        <img src="imagenes/email.jpg" alt="Email" class="w-8 h-8" />
-                    </a>
-                    <a href="#" class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center hover:bg-white/20 transition-all duration-500 hover:scale-110">
-                        <img src="imagenes/git.jpg" alt="GitHub" class="w-8 h-8" />
-                    </a>
-                </div>
-                <div class="border-t border-white/20 pt-10">
-                    <p class="text-gray-500 text-lg">© 2025 Ángel Llamas Ventura. Todos los derechos reservados.</p>
-                </div>
-            </div>
+        <div class="border-t border-white/20 pt-10">
+          <p class="text-gray-500 text-lg">© 2025 Ángel Llamas Ventura. Todos los derechos reservados.</p>
         </div>
-    </footer>
+      </div>
+    </div>
+  </footer>
 
-    <script src="js/main.js"></script>
+  <!-- Botón volver arriba -->
+  <button id="backToTop" class="btn-premium back-to-top w-12 h-12 rounded-full flex items-center justify-center" aria-label="Volver arriba" title="Volver arriba">↑</button>
+
+  <!-- JS propio -->
+  <script src="js/main.js" defer></script>
 </body>
 </html>
